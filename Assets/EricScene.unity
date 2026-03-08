@@ -603,7 +603,6 @@ GameObject:
   - component: {fileID: 1562363989}
   - component: {fileID: 1562363988}
   - component: {fileID: 1562363987}
-  - component: {fileID: 1562363986}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -611,28 +610,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1562363986
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562363985}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1562363987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,7 +628,7 @@ MonoBehaviour:
   _Gradient:
     serializedVersion: 2
     key0: {r: 0.740566, g: 1, b: 0.758322, a: 1}
-    key1: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+    key1: {r: 0.38039216, g: 0.13333334, b: 0, a: 1}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -751,7 +728,7 @@ Transform:
   m_GameObject: {fileID: 1562363985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4745.4854, y: 1584.0192, z: 4035.0925}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1,7 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 namespace m17
 {
@@ -122,12 +120,6 @@ namespace m17
                     for (int i = 0; i < (_Octaves + 1) * 2; i++)
                     {
                         _Heights[i][y, x] = perlinNoise[i];
-                        if (perlinNoise[1] <= 0.1f && ucc > 0)
-                        {
-                            GameObject uc = Instantiate(_UnityChan);
-                            uc.transform.position = new Vector3(x, _Heights[0][x, y], y);
-                            ucc--;
-                        }
                     }
 
                 }
@@ -214,7 +206,16 @@ namespace m17
             Vector3[] vertices = mesh.vertices;
             for (int x = 0; x < _Height; x++)
                 for (int z = 0; z < _Width; z++)
+                {
                     vertices[x * _Width + z] = new Vector3(x, heights[x, z] * amplitude, z);
+                    if (heights[x, z] <= 0.1f && ucc > 0)
+                    {
+                        GameObject uc = Instantiate(_UnityChan);
+                        uc.transform.position = new Vector3(x, heights[x, z] * amplitude, z);
+                        ucc--;
+                    }
+                }
+
 
             mesh.vertices = vertices;
             mesh.RecalculateNormals();
