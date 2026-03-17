@@ -1,4 +1,4 @@
-Shader "Custom/Genkidama"
+Shader "Custom/Hakai"
 {
     Properties
     {
@@ -66,9 +66,10 @@ Shader "Custom/Genkidama"
 
                 // 3. Combinación final
                 fixed4 finalColor = _Color * noise * fresnel;
+                fixed4 finalColor2 = _Color2 * noise * fresnel;
+                fixed4 finalColor3 = _Color / _Color2;
 
-
-                return finalColor+_Color2;
+                return finalColor3;
             }
             ENDCG
         }
